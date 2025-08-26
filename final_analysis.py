@@ -8,7 +8,7 @@ from scipy.signal import find_peaks
 import matplotlib.pyplot as plt
 
 # === USER PARAMETERS ===
-npy_base = r'F:\extra_project\k_means_analysis\final_project\results\cop_dosen_160_22_correct_v2'
+npy_base = r'put the directory of .npy files which you made them using npy_maker.py file in here'
 groups = ['healthy', 'depressed']
 k = 4 # Set your optimal K here!
 
@@ -648,3 +648,4 @@ trans_counts_df = pd.DataFrame(subject_transition_counts)
 # Save to Excel
 trans_counts_df.to_excel('transition_counts_per_subject.xlsx', index=False)
 print("Saved individual transition counts to 'transition_counts_per_subject.xlsx'")
+
