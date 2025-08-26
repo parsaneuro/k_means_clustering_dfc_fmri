@@ -4,16 +4,12 @@ import scipy.io
 from tqdm import tqdm
 
 # ===== USER PARAMETERS =====
-mat_base = r'F:\extra_project\k_means_analysis\final_project\dfc_dosen_22_1'
-npy_base = r'F:\extra_project\k_means_analysis\final_project\results\fpn_dosen_160_22_correct_v2'
+mat_base = r'put the directory of your .mat files resulted from DynamicBC toolbox here'
+npy_base = r'put the directory which you want to save .npy files and do the further analysis on them here'
 groups = ['healthy', 'depressed']
 
 # Specify ROI indices here (example: attention network)
-node_indices = [
-    20, 106, 103, 100, 95, 87, 115, 113, 
-    1, 2, 35, 33, 28, 23, 21, 15, 
-    98, 22, 9, 8, 11
-]
+node_indices = # choose nodes from you matrices which you want to explicitely do the further analysis on them
 
 
 print(node_indices)
@@ -95,3 +91,4 @@ for group in groups:
     convert_group_mat_to_npy(mat_group_path, npy_group_path, max_subjects=max_subjects)
 
 print("\nDone! All .mat window files converted to .npy with Fisher z-normalization.")
+
